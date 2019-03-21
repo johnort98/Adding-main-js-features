@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    ##Big image
+    <img id="source" width="220" height="277" src="maaio.png">
+    <style>
+      var c = document.getElementById('myCanvas');
+      var ctx = c.getContext('2d');
+      var image = document.getElementById('source');
+      ctx.fillStyle = "black";
+      ctx.fillRect(0,0,500,500);
+      ctx.drawImage(img,10,10,150,180);
+    </style>
+    <canvas id="myCanvas" width = "500" height="500" style="border: 1px solid #001111";>
+    </canvas>
+    <div>
+      ##Small image
+      <img id="source"
+      src="maaio.png"
+      width="45" height="45">
+      </img>
+    </div>
+  </body>
+  <script src="flight.js"></script>
+</html>

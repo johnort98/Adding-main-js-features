@@ -2,7 +2,10 @@ var c = document.getElementById('myCanvas');
 var ctx = c.getContext('2d');
 var image = document.getElementById('source');
 
-//ctx.drawImage(image, 10,10,150,180);//,21,20,87,104);
+ctx.fillRect(0,0,canvas.width, canvas.height);
+ctx.drawImage(img,10,10,150,180);
+
+///ctx.drawImage(image, 10,10,150,180,21,20,87,104);
 
 function init(){
   window.requestAnimationFrame(draw);

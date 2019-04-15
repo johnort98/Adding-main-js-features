@@ -1,0 +1,14 @@
+#bd {
+  /* background-color: red; */
+}
+
+#aircraft {
+  text-align: center;
+}
+
+#scope {
+  padding: 500px;
+  background: black;
+  margin-left: 150px;
+  margin-right: 150px;
+}

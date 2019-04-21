@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA6rsD8iitydGkZMcFusjU4jqvAw1dK9Nw&libraries=geometry"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6rsD8iitydGkZMcFusjU4jqvAw1dK9Nw&callback=initMap"
+        async defer>
+    </script>
+		<script src="flightpath.js"></script>
+  </head>
+  <body id="bd">
+    <h1 id="aircraft">Aircraft Scope</h1>
+    <div class="dropDown">
+    <select id="s_from" onChange="go();">
+      <option value="PA">PA</option>
+      <option value="NY">NY</option>
+      <option value="DT">DT</option>
+      <option value="MIA">MIA</option>
+    </select> to
+    <select id="s_to" onChange="go();">
+      <option value="PA">PA</option>
+      <option value="NY">NY</option>
+      <option value="DT">DT</option>
+      <option value="MIA">MIA</option>
+    </select>
+  </div>
+  <div id="map" class="map"></div>
+  <script type="text/javascript">initMap();</script>
+  </body>
+</html>

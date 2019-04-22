@@ -1,5 +1,5 @@
 var animLoop = false,
-	animIndex = 0,
+    animIndex = 0,
 	planePath = false,
 	trailPath = false;
 
@@ -353,4 +353,19 @@ function go() {
 	document.getElementById('s_from').options[document.getElementById('s_from').selectedIndex].value,
 	document.getElementById('s_to').options[document.getElementById('s_to').selectedIndex].value
 	);
+}
+
+function getKey (e) {
+		var location = e.location;
+		var selector;
+		if (location === KeyboardEvent.DOM_KEY_LOCATION_RIGHT) {
+				selector = ['[data-key="' + e.keyCode + '-R"]']
+		} else {
+				var code = e.keyCode || e.which;
+				selector = [
+						'[data-key="' + code + '"]',
+						'[data-char*="' + encodeURIComponent(String.fromCharCode(code)) + '"]'
+				].join(',');
+		}
+		return document.querySelector(selector);
 }
